@@ -1,6 +1,6 @@
 ## Importance Weighted Autoencoders
 #### Yuri Burda, Roger Grosse, Ruslan Salakhutdinov
-###### 7 Nov 2016 
+###### 1 Sep 2015
 
 **Abstract**:
 The variational autoencoder (VAE; Kingma, Welling (2014)) is a recently proposed generative model pairing a top-down generative network with a bottom-up recognition network which approximates posterior inference. It typically makes strong assumptions about posterior inference, for instance that the posterior distribution is approximately factorial, and that its parameters can be approximated with nonlinear regression from the observations. As we show empirically, the VAE objective can lead to overly simplified representations which fail to use the network's entire modeling capacity. We present the importance weighted autoencoder (IWAE), a generative model with the same architecture as the VAE, but which uses a strictly tighter log-likelihood lower bound derived from importance weighting. In the IWAE, the recognition network uses multiple samples to approximate the posterior, giving it increased flexibility to model complex posteriors which do not fit the VAE modeling assumptions. We show empirically that IWAEs learn richer latent space representations than VAEs, leading to improved test log-likelihood on density estimation benchmarks.
@@ -77,3 +77,94 @@ Can you discuss any limitations or limitations of the method?
 
 
 --- 
+
+
+## Variational Auto-encoded Deep Gaussian Processes
+#### Zhenwen Dai, Andreas Damianou, Javier González, Neil Lawrence
+###### 19 Nov 2015
+
+
+<p align="center">
+  <img width="500" src="assets/vaegp.png">
+</p>
+
+
+
+**Abstract**:
+
+We develop a scalable deep non-parametric generative model by augmenting deep Gaussian processes with a recognition model. Inference is performed in a novel scalable variational framework where the variational posterior distributions are reparametrized through a multilayer perceptron. The key aspect of this reformulation is that it prevents the proliferation of variational parameters which otherwise grow linearly in proportion to the sample size. We derive a new formulation of the variational lower bound that allows us to distribute most of the computation in a way that enables to handle datasets of the size of mainstream deep learning tasks. We show the efficacy of the method on a variety of challenges including deep unsupervised learning and deep Bayesian optimization
+
+**Summary**:
+
+The paper "Variational Auto-encoded Deep Gaussian Processes" by Zhenwen Dai, Andreas Damianou, Javier González, and Neil Lawrence introduces a scalable deep non-parametric generative model that combines deep Gaussian processes with a recognition model. Inference is performed in a scalable variational framework, where the variational posterior distributions are reparameterized through a multilayer perceptron, resulting in a new formulation of the variational lower bound. The method is demonstrated to be effective in various deep unsupervised learning and deep Bayesian optimization tasks.
+
+**Key Insights and Lessons**:
+
+* A scalable deep non-parametric generative model is introduced.
+* Inference is performed in a scalable variational framework.
+* The variational posterior distributions are reparameterized through a multilayer perceptron.
+* A new formulation of the variational lower bound is derived.
+* The method is demonstrated to be effective in deep unsupervised learning and deep Bayesian optimization tasks.
+
+**Questions for the authors**:
+
+* How does the new formulation of the variational lower bound compare to existing methods in terms of computational efficiency?
+* What is the scalability of the method compared to other deep generative models?
+* Can you discuss the limitations of the method and how they can be addressed in future work?
+* How does the method handle multi-modal data distributions?
+* How does the performance of the method compare to other deep generative models in terms of sample quality?
+
+
+**Future Research Directions**:
+
+* Extension of the method to handle multi-modal data distributions.
+* Comparison of the method with other deep generative models in terms of sample quality.
+* Investigation of the scalability of the method compared to other deep generative models.
+* Exploration of the limitations of the method and how they can be addressed in future work.
+* Application of the method in various fields, such as computer vision and speech recognition
+
+
+--- 
+
+
+## Neural Variational Inference and Learning in Belief Networks
+#### Andriy Mnih, Karol Gregor
+###### 31 Jan 2014
+
+
+**Abstract**:
+
+
+Highly expressive directed latent variable models, such as sigmoid belief networks, are difficult to train on large datasets because exact inference in them is intractable and none of the approximate inference methods that have been applied to them scale well. We propose a fast non-iterative approximate inference method that uses a feedforward network to implement efficient exact sampling from the variational posterior. The model and this inference network are trained jointly by maximizing a variational lower bound on the log-likelihood. Although the naive estimator of the inference model gradient is too high-variance to be useful, we make it practical by applying several straightforward model-independent variance reduction techniques. Applying our approach to training sigmoid belief networks and deep autoregressive networks, we show that it outperforms the wake-sleep algorithm on MNIST and achieves state-of-the-art results on the Reuters RCV1 document dataset.
+
+
+**Summary**:
+
+The paper "Neural Variational Inference and Learning in Belief Networks" by Andriy Mnih and Karol Gregor proposes a fast non-iterative approximate inference method for highly expressive directed latent variable models, such as sigmoid belief networks. The method uses a feedforward network to implement efficient exact sampling from the variational posterior and the model and inference network are trained jointly. The authors show that the proposed method outperforms the wake-sleep algorithm on MNIST and achieves state-of-the-art results on the Reuters RCV1 document dataset.
+
+**Key Insights and Lessons Learned**:
+
+* Exact inference in highly expressive directed latent variable models is intractable and existing approximate methods do not scale well.
+* A feedforward network can be used to implement efficient exact sampling from the variational posterior.
+* The model and inference network can be trained jointly by maximizing a variational lower bound on the log-likelihood.
+* Variance reduction techniques can make the naive estimator of the inference model gradient practical.
+* The proposed method outperforms the wake-sleep algorithm on MNIST and achieves state-of-the-art results on the Reuters RCV1 document dataset.
+
+
+**Questions for the authors**:
+
+* How does the proposed method compare to other variational inference methods?
+* Can the method be extended to handle models with more complex structure?
+* How sensitive is the performance of the method to the choice of variance reduction techniques?
+* How does the method handle missing data?
+* Have the results been verified on other datasets?
+
+**Related Topics/Future Research Directions**:
+
+* Extension of the method to handle models with more complex structure.
+* Comparison with other variational inference methods.
+* Application of the method to other domains, such as natural language processing.
+* Exploration of other variance reduction techniques.
+* Extension of the method to handle missing data.
+
+
