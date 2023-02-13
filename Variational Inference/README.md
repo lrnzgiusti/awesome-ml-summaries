@@ -189,4 +189,23 @@ We extend the multi-sample approach to discrete latent variables and analyze the
 
 **Summary**:
 
+The paper presents a new method for variational training of deep latent variable models using a multi-sample importance sampling estimate of the likelihood. The authors derive a tight lower bound and develop an unbiased gradient estimator based on low-variance per-sample learning signals. They evaluate this estimator on generative and structured output prediction models and show that it is both simple and effective, competitive with currently used biased estimators.
 
+**Key insights and lessons learned from the paper**:
+* Variational training of deep latent variable models involves maximizing a lower bound on the log-likelihood
+* The use of multi-sample objectives can lead to models that use more of their capacity and achieve higher likelihoods
+* The authors develop a new unbiased gradient estimator designed for importance-sampled objectives
+
+**Questions to ask the authors**:
+* What motivated the development of a new gradient estimator specifically for importance-sampled objectives?
+* Can the method be extended to other types of deep latent variable models besides generative and structured output prediction models?
+* How does the performance of the proposed estimator compare with other existing methods on large-scale datasets?
+* How does the proposed method deal with issues such as high variance in the importance weights?
+* Can the method be used in other areas besides deep latent variable models, such as reinforcement learning or Bayesian neural networks?
+
+**Suggestions for related topics or future research directions**:
+* Extension of the method to handle non-Gaussian variational posteriors and likelihoods
+* Applications of the method in reinforcement learning and Bayesian neural networks
+* Analysis of the scalability of the method to large datasets
+* Exploration of different strategies for choosing importance sampling distributions
+* Comparison of the method with other gradient-based variational inference methods, such as the score function estimator.
