@@ -105,34 +105,192 @@ The paper "Measuring and Relieving the Over-smoothing Problem for Graph Neural N
 
 --- 
 
-## 
-#### 
-###### 
+## Graph Neural Networks Exponentially Lose Expressive Power for Node Classification
+#### Kenta Oono, Taiji Suzuki
+###### 27 May 2019
 
 <p align="center">
-  <img width="500" src="assets/.png">
+  <img width="500" src="assets/oversmooth4.png">
 </p>
 
 **Abstract**: 
 
+Graph Neural Networks (graph NNs) are a promising deep learning approach for analyzing graph-structured data. However, it is known that they do not improve (or sometimes worsen) their predictive performance as we pile up many layers and add non-lineality. To tackle this problem, we investigate the expressive power of graph NNs via their asymptotic behaviors as the layer size tends to infinity. Our strategy is to generalize the forward propagation of a Graph Convolutional Network (GCN), which is a popular graph NN variant, as a specific dynamical system. In the case of a GCN, we show that when its weights satisfy the conditions determined by the spectra of the (augmented) normalized Laplacian, its output exponentially approaches the set of signals that carry information of the connected components and node degrees only for distinguishing nodes. Our theory enables us to relate the expressive power of GCNs with the topological information of the underlying graphs inherent in the graph spectra. To demonstrate this, we characterize the asymptotic behavior of GCNs on the Erdős -- Rényi graph. We show that when the Erdős -- Rényi graph is sufficiently dense and large, a broad range of GCNs on it suffers from the "information loss" in the limit of infinite layers with high probability. Based on the theory, we provide a principled guideline for weight normalization of graph NNs. We experimentally confirm that the proposed weight scaling enhances the predictive performance of GCNs in real data
 
 **Summary**:
+
+The paper "Graph Neural Networks Exponentially Lose Expressive Power for Node Classification" by Kenta Oono and Taiji Suzuki investigates the expressive power of Graph Neural Networks (Graph NNs) and their asymptotic behaviors as the layer size increases. The authors generalize the forward propagation of a Graph Convolutional Network (GCN) as a specific dynamical system and show that when its weights satisfy certain conditions determined by the spectra of the normalized Laplacian, the output of the GCN approaches the set of signals that only carry information of the connected components and node degrees. They also demonstrate this by characterizing the asymptotic behavior of GCNs on the Erdős -- Rényi graph and show that when the graph is dense and large, a broad range of GCNs on it suffers from "information loss" in the limit of infinite layers.
+
+**Key insights and lessons learned**:
+* Graph NNs are a promising deep learning approach for analyzing graph-structured data, but their predictive performance can decrease as the number of layers increases.
+* The expressive power of Graph NNs can be related to the topological information of the underlying graphs inherent in the graph spectra.
+* The asymptotic behavior of GCNs on the Erdős -- Rényi graph shows that when the graph is dense and large, a broad range of GCNs on it suffers from "information loss" in the limit of infinite layers.
+
+**Questions for the authors**:
+* What is the significance of the conditions determined by the spectra of the normalized Laplacian in determining the expressive power of GCNs?
+* Can you explain the concept of "information loss" and why it occurs in GCNs on the Erdős -- Rényi graph when the graph is dense and large?
+* How can the findings of this paper be applied in practical applications of Graph NNs?
+* Are there any other graph models or types of data where the findings of this paper can be applied?
+* Can the theory developed in this paper be extended to other Graph NN variants besides GCN?
+
+**Future research directions**:
+* Exploring the impact of different graph models on the expressive power of Graph NNs.
+* Investigating the use of other graph spectra besides the normalized Laplacian in determining the expressive power of Graph NNs.
+* Developing methods to overcome the "information loss" problem in GCNs and other Graph NN variants.
+* Applying the theory developed in this paper to other types of graph-structured data besides node classification.
+* Examining the relationship between the expressive power of Graph NNs and their generalization performance.
+
+--- 
+
+## A Note on Over-Smoothing for Graph Neural Networks
+#### Chen Cai, Yusu Wang
+###### 23 Jun 2020
+
+<p align="center">
+  <img width="500" src="assets/oversmooth5.png">
+</p>
+
+**Abstract**: 
+
+Graph Neural Networks (GNNs) have achieved a lot of success on graph-structured data. However, it is observed that the performance of graph neural networks does not improve as the number of layers increases. This effect, known as over-smoothing, has been analyzed mostly in linear cases. In this paper, we build upon previous results \cite{oono2019graph} to further analyze the over-smoothing effect in the general graph neural network architecture. We show when the weight matrix satisfies the conditions determined by the spectrum of augmented normalized Laplacian, the Dirichlet energy of embeddings will converge to zero, resulting in the loss of discriminative power. Using Dirichlet energy to measure "expressiveness" of embedding is conceptually clean; it leads to simpler proofs than \cite{oono2019graph} and can handle more non-linearities.
+
+**Summary**:
+The paper "A Note on Over-Smoothing for Graph Neural Networks" by Chen Cai and Yusu Wang analyzes the over-smoothing effect in Graph Neural Networks (GNNs), where the performance of GNNs does not improve with increasing number of layers. The authors show that when the weight matrix of GNNs satisfies certain conditions, the Dirichlet energy of the embeddings will converge to zero, leading to the loss of discriminative power. The authors use Dirichlet energy to measure the "expressiveness" of the embeddings, which leads to a simpler proof than previous results and can handle more non-linearities.
+
+
+**Key insights and lessons**:
+* Over-smoothing in GNNs is a well-known phenomenon, where the performance of GNNs does not improve with increasing number of layers.
+* The authors show that over-smoothing occurs when the weight matrix of GNNs satisfies certain conditions determined by the spectrum of the augmented normalized Laplacian.
+* The authors use Dirichlet energy to measure the "expressiveness" of the embeddings and prove that it converges to zero when over-smoothing occurs, leading to the loss of discriminative power.
+
+**Questions for the authors**:
+* Can you explain why the use of Dirichlet energy as a measure of "expressiveness" of embeddings is conceptually clean?
+* Can you give more examples of non-linearities that your method can handle?
+* Can you explain how the results of this paper can be applied to other types of graph-structured data, such as attributed graphs?
+* Can you discuss the limitations of your method and how it can be improved in future work?
+* Can you provide a comparison between the results of this paper and previous results on over-smoothing in GNNs?
+
+**Suggested future research directions**:
+* The application of the results of this paper to other types of graph-structured data, such as attributed graphs and dynamic graphs.
+* The development of new methods to prevent over-smoothing in GNNs, such as early stopping and dropout.
+* The exploration of different measures of "expressiveness" of embeddings and their impact on over-smoothing.
+* The comparison of the results of this paper with other graph representation learning methods, such as graph convolutional networks and graph autoencoders.
+* The investigation of the scalability and efficiency of the methods proposed in this paper for large-scale graph-structured data.
 
 
 --- 
 
-## 
-#### 
-###### 
+## Revisiting Over-smoothing in Deep GCNs
+#### Chaoqi Yang, Ruijie Wang, Shuochao Yao, Shengzhong Liu, Tarek Abdelzaher
+###### 30 Mar 2020
 
 <p align="center">
-  <img width="500" src="assets/.png">
+  <img width="500" src="assets/oversmooth6.png">
 </p>
 
 **Abstract**: 
 
+Oversmoothing has been assumed to be the major cause of performance drop in deep graph convolutional networks (GCNs). In this paper, we propose a new view that deep GCNs can actually learn to anti-oversmooth during training. This work interprets a standard GCN architecture as layerwise integration of a Multi-layer Perceptron (MLP) and graph regularization. We analyze and conclude that before training, the final representation of a deep GCN does over-smooth, however, it learns anti-oversmoothing during training. Based on the conclusion, the paper further designs a cheap but effective trick to improve GCN training. We verify our conclusions and evaluate the trick on three citation networks and further provide insights on neighborhood aggregation in GCNs.
 
 **Summary**:
+
+The paper "Revisiting Over-smoothing in Deep GCNs" by Chaoqi Yang et al. presents a new view on the problem of over-smoothing in deep graph convolutional networks (GCNs), proposing that deep GCNs can actually learn to anti-oversmooth during training.
+
+
+**Key Insights and Lessons Learned**:
+* The authors interpret a standard GCN architecture as a layerwise integration of a Multi-layer Perceptron (MLP) and graph regularization.
+* They conclude that before training, the final representation of a deep GCN over-smooths, but that it learns anti-oversmoothing during training.
+* The authors design a cheap but effective trick to improve GCN training, and verify their conclusions and evaluate the trick on three citation networks.
+
+**Questions for the Authors**:
+* Can you provide more details on the cheap but effective trick that was designed to improve GCN training?
+* How generalizable is the conclusion that deep GCNs can learn to anti-oversmooth during training to other types of graph data?
+* Could you discuss the potential implications of the conclusion on neighborhood aggregation in GCNs for the wider field of graph convolutional networks?
+
+**Suggestions for Future Research**:
+* Further exploration into the potential generalization of the conclusion to other types of graph data.
+* Extension of the cheap but effective trick to other types of graph convolutional networks.
+* Comparison of the trick to other existing techniques for addressing over-smoothing in GCNs.
+* Examination of the potential implications of the conclusion for other graph deep learning tasks.
+
+
+
+--- 
+## Measuring and Improving the Use of Graph Information in Graph Neural Networks
+#### Yifan Hou, Jian Zhang, James Cheng, Kaili Ma, Richard T. B. Ma, Hongzhi Chen, Ming-Chang Yang
+###### 27 Jun 2022
+
+
+<p align="center">
+  <img width="500" src="assets/oversmooth7.png">
+</p>
+
+**Abstract**: 
+
+Graph neural networks (GNNs) have been widely used for representation learning on graph data. However, there is limited understanding on how much performance GNNs actually gain from graph data. This paper introduces a context-surrounding GNN framework and proposes two smoothness metrics to measure the quantity and quality of information obtained from graph data. A new GNN model, called CS-GNN, is then designed to improve the use of graph information based on the smoothness values of a graph. CS-GNN is shown to achieve better performance than existing methods in different types of real graphs.
+
+**Summary**:
+
+The paper "Measuring and Improving the Use of Graph Information in Graph Neural Networks" by Yifan Hou, Jian Zhang, James Cheng, Kaili Ma, Richard T. B. Ma, Hongzhi Chen, and Ming-Chang Yang introduces a new graph neural network (GNN) framework, CS-GNN, that measures and improves the use of graph information in GNNs. The authors propose two smoothness metrics to evaluate the quantity and quality of information obtained from graph data, and demonstrate that CS-GNN outperforms existing methods on various real graphs.
+
+
+**Key insights and lessons learned**:
+* The authors introduce two smoothness metrics to evaluate the use of graph information in GNNs.
+* The proposed CS-GNN framework is designed to improve the use of graph information based on the smoothness values of a graph.
+* CS-GNN shows improved performance compared to existing methods on different types of real graphs.
+
+**Questions for the authors**:
+* Can the smoothness metrics be extended to other graph representation learning methods besides GNNs?
+* How does the CS-GNN framework compare to other approaches for improving the use of graph information in GNNs?
+* Can the CS-GNN framework be extended to handle graphs with different types of node and edge features?
+* How does the performance of CS-GNN change with increasing graph size and complexity?
+* Can the CS-GNN framework be applied to other graph learning tasks besides representation learning?
+
+**Suggestions for related topics or future research directions**:
+* Extension of the CS-GNN framework to handle graphs with dynamic structure and temporal information.
+* Application of the CS-GNN framework to graph-based semi-supervised and unsupervised learning tasks.
+* Integration of attention mechanisms and graph convolutions in the CS-GNN framework.
+* Investigation of the relationship between smoothness metrics and graph data distributions.
+* Comparison of the CS-GNN framework with other graph representation learning methods, such as graph auto-encoders and graph attention networks.
+
+
+--- 
+
+## Simple and Deep Graph Convolutional Networks
+#### Ming Chen, Zhewei Wei, Zengfeng Huang, Bolin Ding, Yaliang Li
+###### 4 Jul 2020
+
+<p align="center">
+  <img width="500" src="assets/oversmooth8.png">
+</p>
+
+**Abstract**: 
+
+Graph convolutional networks (GCNs) are a powerful deep learning approach for graph-structured data. Recently, GCNs and subsequent variants have shown superior performance in various application areas on real-world datasets. Despite their success, most of the current GCN models are shallow, due to the {\em over-smoothing} problem. In this paper, we study the problem of designing and analyzing deep graph convolutional networks. We propose the GCNII, an extension of the vanilla GCN model with two simple yet effective techniques: {\em Initial residual} and {\em Identity mapping}. We provide theoretical and empirical evidence that the two techniques effectively relieves the problem of over-smoothing. Our experiments show that the deep GCNII model outperforms the state-of-the-art methods on various semi- and full-supervised tasks
+
+**Summary**:
+
+The paper "Simple and Deep Graph Convolutional Networks" by Ming Chen, Zhewei Wei, Zengfeng Huang, Bolin Ding, and Yaliang Li focuses on designing and analyzing deep graph convolutional networks (GCNs) to overcome the over-smoothing problem in GCN models. The authors propose the GCNII, an extension of the vanilla GCN model that uses two simple yet effective techniques called Initial residual and Identity mapping to relieve over-smoothing. The paper provides theoretical and empirical evidence for the effectiveness of GCNII and shows that it outperforms state-of-the-art methods on various semi- and full-supervised tasks.
+
+
+**Key Insights and Lessons Learned**:
+* Over-smoothing is a problem in shallow GCN models.
+* The GCNII model effectively relieves over-smoothing by using two simple techniques: Initial residual and Identity mapping.
+* The GCNII model outperforms the state-of-the-art methods on various semi- and full-supervised tasks.
+
+**Questions to ask the authors**:
+* Can you explain the intuition behind the Initial residual and Identity mapping techniques?
+* How did you select the datasets and tasks used in the experiments?
+* Have you tested the GCNII model on other graph-structured data besides the ones used in the experiments?
+* Can the GCNII model be extended to handle graph-structured data with varying node features?
+* How does the GCNII model compare to other deep learning approaches for graph-structured data?
+
+**Suggestions for future research**:
+* Evaluate the performance of the GCNII model on graph-structured data with varying node features.
+* Explore the scalability of the GCNII model on large graph-structured data.
+* Investigate the impact of different activation functions on the performance of the GCNII model.
+* Study the effect of different loss functions on the GCNII model.
+* Compare the GCNII model to other deep learning approaches for graph-structured data with attention mechanisms.
 
 
 --- 
