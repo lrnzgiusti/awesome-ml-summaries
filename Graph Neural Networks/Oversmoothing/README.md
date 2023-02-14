@@ -335,38 +335,42 @@ The paper "Two Sides of the Same Coin: Heterophily and Oversmoothing in Graph Co
 --- 
 
 
+## Neural Sheaf Diffusion: A Topological Perspective on Heterophily and Oversmoothing in GNNs
+#### Cristian Bodnar, Francesco Di Giovanni, Benjamin Paul Chamberlain, Pietro Liò, Michael M. Bronstein
+###### 9 Feb 2022 (v1)
 
-## 
-#### 
-###### 
 
 <p align="center">
-  <img width="500" src="assets/.png">
+  <img width="500" src="assets/oversmooth10.png">
 </p>
 
-**Abstract**: 
 
+**Abstract**:
+Cellular sheaves equip graphs with a "geometrical" structure by assigning vector spaces and linear maps to nodes and edges. Graph Neural Networks (GNNs) implicitly assume a graph with a trivial underlying sheaf. This choice is reflected in the structure of the graph Laplacian operator, the properties of the associated diffusion equation, and the characteristics of the convolutional models that discretise this equation. In this paper, we use cellular sheaf theory to show that the underlying geometry of the graph is deeply linked with the performance of GNNs in heterophilic settings and their oversmoothing behaviour. By considering a hierarchy of increasingly general sheaves, we study how the ability of the sheaf diffusion process to achieve linear separation of the classes in the infinite time limit expands. At the same time, we prove that when the sheaf is non-trivial, discretised parametric diffusion processes have greater control than GNNs over their asymptotic behaviour. On the practical side, we study how sheaves can be learned from data. The resulting sheaf diffusion models have many desirable properties that address the limitations of classical graph diffusion equations (and corresponding GNN models) and obtain competitive results in heterophilic settings. Overall, our work provides new connections between GNNs and algebraic topology and would be of interest to both fields.
 
 **Summary**:
 
+The paper "Neural Sheaf Diffusion: A Topological Perspective on Heterophily and Oversmoothing in GNNs" by Bodnar et al. explores the connection between the underlying geometry of a graph and the performance of Graph Neural Networks (GNNs) using cellular sheaf theory. The authors show that the choice of sheaf influences the properties of the graph Laplacian operator and the characteristics of the convolutional models used in GNNs, affecting their performance in heterophilic settings and oversmoothing behavior. They also study the learning of sheaves from data and propose sheaf diffusion models that address the limitations of classical graph diffusion equations.
+
+**Key Insights and Lessons Learned**:
+* The choice of underlying sheaf has a significant impact on the properties of GNNs
+* The ability of the sheaf diffusion process to achieve linear separation of classes expands with a hierarchy of increasingly general sheaves
+* Discretized parametric diffusion processes have greater control over their asymptotic behavior than GNNs when the sheaf is non-trivial
+* Sheaf diffusion models have desirable properties that address the limitations of classical graph diffusion equations
+
+**Questions for the authors**:
+* How do the sheaf diffusion models compare to existing GNNs in terms of computational complexity and scalability?
+* Can the sheaf diffusion models be used for graph classification tasks with a large number of classes?
+* What are some applications of sheaf diffusion models beyond graph-based problems?
+* How do the learned sheaves change when the graph structure is updated over time?
+* Are there any limitations to the use of sheaf diffusion models, and how can they be addressed in future work?
+
+**Suggestions for related topics or future research directions**:
+* Extension of the sheaf diffusion models to dynamic graphs and temporal networks
+* Combining sheaf diffusion models with other graph-based deep learning techniques such as graph attention networks
+* Application of sheaf diffusion models to graph-based reinforcement learning problems
+* Comparison of sheaf diffusion models with other graph convolutional networks on real-world datasets
+* Investigation of the use of sheaf diffusion models for graph representation learning and graph visualization.
+
 
 --- 
-
-
-
-## 
-#### 
-###### 
-
-<p align="center">
-  <img width="500" src="assets/.png">
-</p>
-
-**Abstract**: 
-
-
-**Summary**:
-
-
---- 
-
