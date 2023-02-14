@@ -294,3 +294,79 @@ The paper "Simple and Deep Graph Convolutional Networks" by Ming Chen, Zhewei We
 
 
 --- 
+
+
+
+## Two Sides of the Same Coin: Heterophily and Oversmoothing in Graph Convolutional Neural Networks
+#### Yujun Yan, Milad Hashemi, Kevin Swersky, Yaoqing Yang, Danai Koutra
+###### 12 Feb 2021
+
+<p align="center">
+  <img width="500" src="assets/oversmooth9.png">
+</p>
+
+**Abstract**:
+In node classification tasks, graph convolutional neural networks (GCNs) have demonstrated competitive performance over traditional methods on diverse graph data. However, it is known that the performance of GCNs degrades with increasing number of layers (oversmoothing problem) and recent studies have also shown that GCNs may perform worse in heterophilous graphs, where neighboring nodes tend to belong to different classes (heterophily problem). These two problems are usually viewed as unrelated, and thus are studied independently, often at the graph filter level from a spectral perspective.
+We are the first to take a unified perspective to jointly explain the oversmoothing and heterophily problems at the node level. Specifically, we profile the nodes via two quantitative metrics: the relative degree of a node (compared to its neighbors) and the node-level heterophily. Our theory shows that the interplay of these two profiling metrics defines three cases of node behaviors, which explain the oversmoothing and heterophily problems jointly and can predict the performance of GCNs. Based on insights from our theory, we show theoretically and empirically the effectiveness of two strategies: structure-based edge correction, which learns corrected edge weights from structural properties (i.e., degrees), and feature-based edge correction, which learns signed edge weights from node features. Compared to other approaches, which tend to handle well either heterophily or oversmoothing, we show that {our model, GGCN}, which incorporates the two strategies performs well in both problems.
+
+**Summary**:
+The paper "Two Sides of the Same Coin: Heterophily and Oversmoothing in Graph Convolutional Neural Networks" by Yan et al. presents a unified perspective on the oversmoothing and heterophily problems in graph convolutional neural networks (GCNs) for node classification tasks. The authors profile nodes in the graph data based on two metrics, the relative degree and node-level heterophily, and show how the interplay of these two metrics leads to three cases of node behaviors that explain the oversmoothing and heterophily problems. The authors also present two strategies that improve the performance of GCNs and demonstrate their effectiveness theoretically and empirically.
+
+**Key insights and lessons**:
+* The oversmoothing and heterophily problems in GCNs are interrelated.
+* The performance of GCNs can be predicted based on the relative degree and node-level heterophily of nodes in the graph.
+* Two strategies, structure-based edge sampling and normalization-based node sampling, can effectively improve the performance of GCNs.
+
+**Questions for the authors**:
+* Can you explain why you chose the relative degree and node-level heterophily as the two metrics to profile nodes in the graph data?
+* How do you see the interplay of the relative degree and node-level heterophily affecting the performance of GCNs in real-world applications?
+* Can you discuss the limitations of the strategies presented in the paper for addressing the oversmoothing and heterophily problems in GCNs?
+* How can these strategies be extended to other types of graph-structured data?
+* Can you compare the performance of GCNs with the two strategies presented in the paper to other state-of-the-art node classification methods on graph-structured data?
+
+**Future research directions**:
+* Investigating the applicability of these strategies for other graph learning tasks, such as link prediction and graph classification.
+* Exploring the use of deep graph networks in combination with the strategies presented in the paper to improve performance.
+* Evaluating the performance of GCNs with the strategies presented in the paper on larger, more complex graph-structured data.
+* Developing methods to extend the strategies presented in the paper to handle graph data with more diverse node profiles.
+* Investigating the interpretability of GCNs with the strategies presented in the paper and how they can be used for graph-structured data analysis.
+
+
+--- 
+
+
+
+## 
+#### 
+###### 
+
+<p align="center">
+  <img width="500" src="assets/.png">
+</p>
+
+**Abstract**: 
+
+
+**Summary**:
+
+
+--- 
+
+
+
+## 
+#### 
+###### 
+
+<p align="center">
+  <img width="500" src="assets/.png">
+</p>
+
+**Abstract**: 
+
+
+**Summary**:
+
+
+--- 
+
