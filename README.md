@@ -1,1 +1,1 @@
-# awesome-papers
+# awesome-ml-summaries
