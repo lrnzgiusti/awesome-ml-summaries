@@ -116,3 +116,88 @@ The paper describes the training of a 22B-parameter Vision Transformer (ViT-22B)
 
 ---
 
+
+## DensePose From WiFi
+#### Jiaqi Geng, Dong Huang, Fernando De la Torre
+###### 31 Dec 2022
+
+
+<p align="center">
+  <img width="500" src="assets/w4.png">
+</p>
+
+
+
+**Abstract**:
+Advances in computer vision and machine learning techniques have led to significant development in 2D and 3D human pose estimation from RGB cameras, LiDAR, and radars. However, human pose estimation from images is adversely affected by occlusion and lighting, which are common in many scenarios of interest. Radar and LiDAR technologies, on the other hand, need specialized hardware that is expensive and power-intensive. Furthermore, placing these sensors in non-public areas raises significant privacy concerns. To address these limitations, recent research has explored the use of WiFi antennas (1D sensors) for body segmentation and key-point body detection. This paper further expands on the use of the WiFi signal in combination with deep learning architectures, commonly used in computer vision, to estimate dense human pose correspondence. We developed a deep neural network that maps the phase and amplitude of WiFi signals to UV coordinates within 24 human regions. The results of the study reveal that our model can estimate the dense pose of multiple subjects, with comparable performance to image-based approaches, by utilizing WiFi signals as the only input. This paves the way for low-cost, broadly accessible, and privacy-preserving algorithms for human sensing.
+
+**Summary**:
+
+"default" prompt is usedThe paper "DensePose From WiFi" presents a deep learning-based approach that utilizes WiFi signals for estimating dense human pose correspondence, which has comparable performance to image-based approaches and paves the way for low-cost, widely accessible, and privacy-preserving human sensing.
+
+**Key insights and lessons learned**:
+* WiFi signals can be used as a low-cost, non-invasive, and privacy-preserving method for estimating dense human pose correspondence.
+* The proposed approach, which maps the phase and amplitude of WiFi signals to UV coordinates within 24 human regions, achieves comparable performance to image-based approaches.
+* The approach is robust to occlusion and lighting conditions, which are common in many scenarios of interest.
+* The results demonstrate the potential of WiFi-based approaches for human sensing and pose estimation in various applications, such as healthcare, sports, and security.
+
+
+**Questions for the authors**:
+* What were the main challenges you faced when developing the proposed approach, and how did you address them?
+* How does the performance of the proposed approach compare to that of LiDAR and radar-based approaches?
+* What are the limitations of the proposed approach, and how could they be addressed in future research?
+* What are the potential applications of the proposed approach beyond human pose estimation?
+* What are the privacy implications of using WiFi signals for human sensing, and how can they be addressed?
+
+
+**Suggestions for future research**:
+* Investigating the use of WiFi signals for other tasks, such as activity recognition, emotion recognition, and gait analysis.
+* Exploring the potential of combining WiFi signals with other sensing modalities, such as RGB cameras and LiDAR, for improved human sensing.
+* Evaluating the robustness of the proposed approach to different environments and scenarios, such as outdoor and crowded environments.
+* Investigating the use of federated learning and differential privacy to address the privacy concerns of WiFi-based human sensing.
+* Developing applications and systems that utilize the proposed approach for various real-world use cases.
+
+---
+
+## Extracting Training Data from Diffusion Models
+#### Nicholas Carlini, Jamie Hayes, Milad Nasr, Matthew Jagielski, Vikash Sehwag, Florian Tramèr, Borja Balle, Daphne Ippolito, Eric Wallace
+###### 30 Jan 2023
+
+
+
+
+<p align="center">
+  <img width="500" src="assets/w5.png">
+</p>
+
+**Abstract**:
+Image diffusion models such as DALL-E 2, Imagen, and Stable Diffusion have attracted significant attention due to their ability to generate high-quality synthetic images. In this work, we show that diffusion models memorize individual images from their training data and emit them at generation time. With a generate-and-filter pipeline, we extract over a thousand training examples from state-of-the-art models, ranging from photographs of individual people to trademarked company logos. We also train hundreds of diffusion models in various settings to analyze how different modeling and data decisions affect privacy. Overall, our results show that diffusion models are much less private than prior generative models such as GANs, and that mitigating these vulnerabilities may require new advances in privacy-preserving training.
+
+**Summary**:
+
+"default" prompt is usedThe paper "Extracting Training Data from Diffusion Models" by Carlini et al. shows that diffusion models, such as DALL-E 2 and Imagen, memorize individual images from their training data and emit them at generation time, making them less private than prior generative models, and demonstrates the need for new advances in privacy-preserving training.
+
+**Key insights and lessons learned**:
+* Diffusion models memorize training images, and these can be extracted using a generate-and-filter pipeline.
+* Diffusion models are less private than previous generative models, such as GANs, and this is due to their reliance on conditioning on the entire input sequence.
+* Privacy vulnerabilities in diffusion models arise due to the use of conditioning on the entire input sequence and the high capacity of the models.
+
+
+**Questions for the authors**:
+* How can diffusion models be modified to prevent memorization of training data?
+* Can the generate-and-filter pipeline be used to extract training data from other types of generative models?
+* Are there any practical ways to mitigate the privacy vulnerabilities in diffusion models, such as using different conditioning schemes or reducing model capacity?
+* How do the results in this paper affect the use of diffusion models for applications such as content creation and data augmentation?
+* Are there any potential applications for the extracted training data beyond privacy analysis?
+
+
+**Suggestions for future research**:
+* Investigating privacy-preserving training methods for diffusion models.
+* Exploring alternative conditioning schemes for diffusion models to mitigate privacy vulnerabilities.
+* Examining the relationship between model capacity and privacy vulnerabilities in generative models.
+* Investigating the potential use of the extracted training data for data augmentation or transfer learning.
+* Comparing the privacy vulnerabilities of diffusion models with other types of generative models.
+
+---
+
+
