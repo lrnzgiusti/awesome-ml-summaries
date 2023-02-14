@@ -199,7 +199,7 @@ Image diffusion models such as DALL-E 2, Imagen, and Stable Diffusion have attra
 * Examining the relationship between model capacity and privacy vulnerabilities in generative models.
 * Investigating the potential use of the extracted training data for data augmentation or transfer learning.
 * Comparing the privacy vulnerabilities of diffusion models with other types of generative models.
-
+a
 ---
 
 
