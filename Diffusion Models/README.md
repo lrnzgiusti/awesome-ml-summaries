@@ -37,3 +37,41 @@ The paper proposes an approach to deep unsupervised learning that achieves both 
 * Developing techniques for evaluating the quality of the generative models created using the proposed approach, and comparing the results to those obtained using other methods.
 
 ---
+
+## Diffusion Models Beat GANs on Image Synthesis
+#### Prafulla Dhariwal, Alex Nichol
+###### 11 May 2021 (v1)
+
+<p align="center">
+  <img width="500" src="assets/2.png">
+</p>
+
+
+
+**Abstract**:
+We show that diffusion models can achieve image sample quality superior to the current state-of-the-art generative models. We achieve this on unconditional image synthesis by finding a better architecture through a series of ablations. For conditional image synthesis, we further improve sample quality with classifier guidance: a simple, compute-efficient method for trading off diversity for fidelity using gradients from a classifier. We achieve an FID of 2.97 on ImageNet 128×128, 4.59 on ImageNet 256×256, and 7.72 on ImageNet 512×512, and we match BigGAN-deep even with as few as 25 forward passes per sample, all while maintaining better coverage of the distribution. Finally, we find that classifier guidance combines well with upsampling diffusion models, further improving FID to 3.94 on ImageNet 256×256 and 3.85 on ImageNet 512×512. We release our code at this https URL
+
+**Summary**:
+
+The paper "Diffusion Models Beat GANs on Image Synthesis" by Prafulla Dhariwal and Alex Nichol shows that diffusion models can outperform GANs in terms of image sample quality by proposing a better architecture and a method for trading off diversity for fidelity using gradients from a classifier.
+
+**Key insights and lessons learned from the paper include**:
+* Diffusion models can achieve superior image sample quality compared to current state-of-the-art GANs.
+* A better architecture for diffusion models can be obtained through a series of ablations.
+* A simple, compute-efficient method called classifier guidance can be used to further improve sample quality in conditional image synthesis.
+* Classifier guidance can be combined with upsampling diffusion models to improve sample quality even further.
+* The proposed methods achieve state-of-the-art results on ImageNet and maintain better coverage of the distribution.
+
+
+**Three questions to ask the authors are**:
+* What led you to explore diffusion models as an alternative to GANs for image synthesis?
+* Can your proposed methods be applied to other types of data besides images?
+* Are there any limitations to your proposed methods, and how do you plan to address them in future work?
+
+
+**Three suggestions for related topics or future research directions based on the paper are**:
+* Exploring the use of diffusion models for other types of generative tasks besides image synthesis, such as text generation or speech synthesis.
+* Investigating the relationship between the architecture of diffusion models and the quality of generated samples.
+* Applying classifier guidance to other types of generative models to improve sample quality.
+
+---
