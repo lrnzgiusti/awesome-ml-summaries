@@ -119,6 +119,48 @@ The paper "Diffusion Models Beat GANs on Image Synthesis" by Prafulla Dhariwal a
 
 ---
 
+## Generative Modeling by Estimating Gradients of the Data Distribution
+#### Yang Song, Stefano Ermon
+###### 12 Jul 2019 (v1)
+
+
+<p align="center">
+  <img width="500" src="assets/4.png">
+</p>
+
+
+**Abstract**:
+We introduce a new generative model where samples are produced via Langevin dynamics using gradients of the data distribution estimated with score matching. Because gradients can be ill-defined and hard to estimate when the data resides on low-dimensional manifolds, we perturb the data with different levels of Gaussian noise, and jointly estimate the corresponding scores, i.e., the vector fields of gradients of the perturbed data distribution for all noise levels. For sampling, we propose an annealed Langevin dynamics where we use gradients corresponding to gradually decreasing noise levels as the sampling process gets closer to the data manifold. Our framework allows flexible model architectures, requires no sampling during training or the use of adversarial methods, and provides a learning objective that can be used for principled model comparisons. Our models produce samples comparable to GANs on MNIST, CelebA and CIFAR-10 datasets, achieving a new state-of-the-art inception score of 8.87 on CIFAR-10. Additionally, we demonstrate that our models learn effective representations via image inpainting experiments.
+
+**Summary**:
+
+The paper "Generative Modeling by Estimating Gradients of the Data Distribution" introduces a generative model that uses Langevin dynamics to produce samples by estimating gradients of the data distribution with score matching, and proposes an annealed Langevin dynamics for sampling where gradients corresponding to gradually decreasing noise levels are used as the sampling process gets closer to the data manifold, achieving state-of-the-art results on CIFAR-10 and effective representations via image inpainting experiments.
+
+**Key insights and lessons learned**:
+* A new generative model is introduced that estimates gradients of the data distribution to produce samples via Langevin dynamics using score matching.
+* The proposed model requires no sampling during training or the use of adversarial methods and allows flexible model architectures.
+* An annealed Langevin dynamics for sampling is proposed where gradients corresponding to gradually decreasing noise levels are used as the sampling process gets closer to the data manifold.
+* The proposed model achieves state-of-the-art results on CIFAR-10 and produces samples comparable to GANs on MNIST and CelebA datasets.
+* The proposed model learns effective representations via image inpainting experiments.
+
+
+**Questions for the authors**:
+* How does the proposed model compare to other state-of-the-art generative models in terms of efficiency and scalability?
+* How does the annealed Langevin dynamics for sampling affect the quality and diversity of generated samples?
+* Can the proposed model be applied to other types of data beyond images, such as text or audio?
+* How sensitive is the proposed model to the choice of hyperparameters, such as the noise levels used for perturbing the data?
+* How can the proposed model be used for downstream tasks, such as transfer learning or fine-tuning on specific datasets?
+
+
+**Suggestions for future research**:
+* Investigating the use of the proposed model for unsupervised and semi-supervised learning tasks.
+* Exploring the potential of the proposed model for generative modeling of multimodal and structured data.
+* Studying the interpretability and disentanglement properties of the proposed model.
+* Investigating the use of other types of noise distributions for perturbing the data and estimating gradients.
+* Studying the use of the proposed model in real-world applications, such as data augmentation and generative data synthesis.
+
+---
+
 
 ## Hierarchical Text-Conditional Image Generation with CLIP Latents
 #### Aditya Ramesh, Prafulla Dhariwal, Alex Nichol, Casey Chu, Mark Chen
