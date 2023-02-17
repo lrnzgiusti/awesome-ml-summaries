@@ -118,3 +118,45 @@ The paper "Diffusion Models Beat GANs on Image Synthesis" by Prafulla Dhariwal a
 * Applying classifier guidance to other types of generative models to improve sample quality.
 
 ---
+
+
+## Hierarchical Text-Conditional Image Generation with CLIP Latents
+#### Aditya Ramesh, Prafulla Dhariwal, Alex Nichol, Casey Chu, Mark Chen
+###### 13 Apr 2022
+
+<p align="center">
+  <img width="500" src="assets/5.png">
+</p>
+
+
+**Abstract**:
+Contrastive models like CLIP have been shown to learn robust representations of images that capture both semantics and style. To leverage these representations for image generation, we propose a two-stage model: a prior that generates a CLIP image embedding given a text caption, and a decoder that generates an image conditioned on the image embedding. We show that explicitly generating image representations improves image diversity with minimal loss in photorealism and caption similarity. Our decoders conditioned on image representations can also produce variations of an image that preserve both its semantics and style, while varying the non-essential details absent from the image representation. Moreover, the joint embedding space of CLIP enables language-guided image manipulations in a zero-shot fashion. We use diffusion models for the decoder and experiment with both autoregressive and diffusion models for the prior, finding that the latter are computationally more efficient and produce higher-quality samples.
+
+**Summary**:
+
+The paper proposes a two-stage model for text-conditional image generation that leverages contrastive image representations learned by CLIP, showing that explicitly generating image representations improves image diversity without sacrificing photorealism and caption similarity, and that the joint embedding space of CLIP enables zero-shot language-guided image manipulations.
+
+**Key insights and lessons learned from the paper are**:
+* Contrastive models like CLIP can be leveraged for image generation by using them to generate image embeddings that are then used to condition an image generator.
+* Explicitly generating image representations can improve image diversity without sacrificing photorealism and caption similarity.
+* The joint embedding space of CLIP enables zero-shot language-guided image manipulations.
+* Diffusion models for image generation can be computationally more efficient and produce higher-quality samples than autoregressive models.
+* The proposed method can produce variations of an image that preserve both its semantics and style, while varying the non-essential details.
+
+
+**Some questions that could be asked to the authors about their work are**:
+* How do you envision the proposed method being used in practical applications, and what are some potential use cases?
+* Can the proposed method be adapted to work with other contrastive models or image embedding methods?
+* How do you evaluate the quality and diversity of the generated images, and what metrics do you use?
+* How do you ensure that the generated images are not biased or discriminatory?
+* What are some limitations or challenges of the proposed method that need to be addressed in future research?
+
+
+**Some suggestions for related topics or future research directions based on the content of the paper are**:
+* Exploring other ways of using CLIP for image generation, such as using it to guide the training of a generative model.
+* Investigating the use of other types of language input for text-conditional image generation, such as multi-modal or unstructured text.
+* Extending the proposed method to work with other types of image manipulation tasks, such as image-to-image translation or style transfer.
+* Studying the ethical and social implications of using AI-generated images, and developing methods for ensuring fairness and inclusivity in image generation.
+* Investigating the use of contrastive models for other types of generative tasks, such as video or audio generation.
+
+---
