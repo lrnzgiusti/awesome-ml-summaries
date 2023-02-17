@@ -38,12 +38,55 @@ The paper proposes an approach to deep unsupervised learning that achieves both 
 
 ---
 
+
+## Denoising Diffusion Probabilistic Models
+#### Jonathan Ho, Ajay Jain, Pieter Abbeel
+###### 19 Jun 2020 (v1)
+
+
+<p align="center">
+  <img width="500" src="assets/2.png">
+</p>
+
+
+
+**Abstract**:
+We present high quality image synthesis results using diffusion probabilistic models, a class of latent variable models inspired by considerations from nonequilibrium thermodynamics. Our best results are obtained by training on a weighted variational bound designed according to a novel connection between diffusion probabilistic models and denoising score matching with Langevin dynamics, and our models naturally admit a progressive lossy decompression scheme that can be interpreted as a generalization of autoregressive decoding. On the unconditional CIFAR10 dataset, we obtain an Inception score of 9.46 and a state-of-the-art FID score of 3.17. On 256x256 LSUN, we obtain sample quality similar to ProgressiveGAN. Our implementation is available at this https URL
+
+**Summary**:
+
+The paper presents a new class of latent variable models called diffusion probabilistic models for image synthesis, which use a novel weighted variational bound and a progressive lossy decompression scheme that can be seen as a generalization of autoregressive decoding, achieving state-of-the-art results on CIFAR10 and LSUN datasets.
+
+**Key insights and lessons learned from the paper**:
+* Diffusion probabilistic models, inspired by nonequilibrium thermodynamics, can be used for image synthesis, achieving high-quality results.
+* A novel connection between diffusion probabilistic models and denoising score matching with Langevin dynamics is proposed, and a weighted variational bound is designed based on this connection, resulting in improved image synthesis quality.
+* The proposed models admit a progressive lossy decompression scheme that can be interpreted as a generalization of autoregressive decoding, which is computationally efficient and allows for high-resolution image synthesis.
+
+
+**Questions for the authors**:
+* Can diffusion probabilistic models be applied to other types of data, such as audio or text?
+* How does the proposed weighted variational bound compare to other variational bounds used in probabilistic models?
+* Are there any limitations or challenges in using diffusion probabilistic models for image synthesis that need to be addressed in future research?
+* Can the progressive lossy decompression scheme be applied to other types of generative models, such as variational autoencoders?
+* How sensitive are the results to the hyperparameters chosen for the model training?
+
+
+**Suggestions for future research**:
+* Investigate the use of diffusion probabilistic models for other applications, such as image inpainting or super-resolution.
+* Explore the theoretical properties of diffusion probabilistic models and their connection to other types of probabilistic models.
+* Develop new optimization techniques or loss functions to further improve the performance of diffusion probabilistic models.
+* Compare the performance of diffusion probabilistic models to other state-of-the-art generative models on a wider range of datasets.
+* Investigate the interpretability of diffusion probabilistic models and how they can be used for tasks such as image editing or style transfer.
+
+---
+
+
 ## Diffusion Models Beat GANs on Image Synthesis
 #### Prafulla Dhariwal, Alex Nichol
 ###### 11 May 2021 (v1)
 
 <p align="center">
-  <img width="500" src="assets/2.png">
+  <img width="500" src="assets/3.png">
 </p>
 
 
