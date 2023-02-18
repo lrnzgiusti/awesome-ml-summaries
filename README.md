@@ -135,7 +135,7 @@ Advances in computer vision and machine learning techniques have led to signific
 
 **Summary**:
 
-"default" prompt is usedThe paper "DensePose From WiFi" presents a deep learning-based approach that utilizes WiFi signals for estimating dense human pose correspondence, which has comparable performance to image-based approaches and paves the way for low-cost, widely accessible, and privacy-preserving human sensing.
+The paper "DensePose From WiFi" presents a deep learning-based approach that utilizes WiFi signals for estimating dense human pose correspondence, which has comparable performance to image-based approaches and paves the way for low-cost, widely accessible, and privacy-preserving human sensing.
 
 **Key insights and lessons learned**:
 * WiFi signals can be used as a low-cost, non-invasive, and privacy-preserving method for estimating dense human pose correspondence.
@@ -177,7 +177,7 @@ Image diffusion models such as DALL-E 2, Imagen, and Stable Diffusion have attra
 
 **Summary**:
 
-"default" prompt is usedThe paper "Extracting Training Data from Diffusion Models" by Carlini et al. shows that diffusion models, such as DALL-E 2 and Imagen, memorize individual images from their training data and emit them at generation time, making them less private than prior generative models, and demonstrates the need for new advances in privacy-preserving training.
+The paper "Extracting Training Data from Diffusion Models" by Carlini et al. shows that diffusion models, such as DALL-E 2 and Imagen, memorize individual images from their training data and emit them at generation time, making them less private than prior generative models, and demonstrates the need for new advances in privacy-preserving training.
 
 **Key insights and lessons learned**:
 * Diffusion models memorize training images, and these can be extracted using a generate-and-filter pipeline.
