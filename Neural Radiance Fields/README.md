@@ -41,6 +41,10 @@ The paper "NeRF: Representing Scenes as Neural Radiance Fields for View Synthesi
 #### Ricardo Martin-Brualla, Noha Radwan, Mehdi S. M. Sajjadi, Jonathan T. Barron, Alexey Dosovitskiy, Daniel Duckworth
 ###### 5 Aug 2020 (v1)
 
+<p align="center">
+  <img width="500" src="assets/1.png">
+</p>
+
 
 
 **Abstract**:
