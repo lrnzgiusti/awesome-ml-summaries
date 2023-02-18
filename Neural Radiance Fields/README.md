@@ -46,7 +46,7 @@ The paper "NeRF: Representing Scenes as Neural Radiance Fields for View Synthesi
 ###### 5 Aug 2020 (v1)
 
 <p align="center">
-  <img width="500" src="assets/1.png">
+  <img width="500" src="assets/2.png">
 </p>
 
 
@@ -82,7 +82,7 @@ The paper "NeRF in the Wild: Neural Radiance Fields for Unconstrained Photo Coll
 ###### 3 Dec 2020 (v1)
 
 <p align="center">
-  <img width="500" src="assets/1.png">
+  <img width="500" src="assets/3.png">
 </p>
 
 
