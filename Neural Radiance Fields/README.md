@@ -73,6 +73,10 @@ The paper "NeRF in the Wild: Neural Radiance Fields for Unconstrained Photo Coll
 #### Alex Yu, Vickie Ye, Matthew Tancik, Angjoo Kanazawa
 ###### 3 Dec 2020 (v1)
 
+<p align="center">
+  <img width="500" src="assets/1.png">
+</p>
+
 
 
 **Abstract**:
