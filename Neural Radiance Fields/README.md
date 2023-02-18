@@ -2,6 +2,10 @@
 #### Ben Mildenhall, Pratul P. Srinivasan, Matthew Tancik, Jonathan T. Barron, Ravi Ramamoorthi, Ren Ng
 ###### 19 Mar 2020 (v1)
 
+<p align="center">
+  <img width="500" src="assets/1.png">
+</p>
+
 
 
 **Abstract**:
