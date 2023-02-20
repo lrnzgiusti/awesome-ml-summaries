@@ -1,19 +1,29 @@
 ## Reconciling modern machine learning practice and the bias-variance trade-off
 #### Mikhail Belkin, Daniel Hsu, Siyuan Ma, Soumik Mandal
 ###### 28 Dec 2018 (v1)
+
+
 **Abstract**:
 Breakthroughs in machine learning are rapidly changing science and society, yet our fundamental understanding of this technology has lagged far behind. Indeed, one of the central tenets of the field, the bias-variance trade-off, appears to be at odds with the observed behavior of methods used in the modern machine learning practice. The bias-variance trade-off implies that a model should balance under-fitting and over-fitting: rich enough to express underlying structure in data, simple enough to avoid fitting spurious patterns. However, in the modern practice, very rich models such as neural networks are trained to exactly fit (i.e., interpolate) the data. Classically, such models would be considered over-fit, and yet they often obtain high accuracy on test data. This apparent contradiction has raised questions about the mathematical foundations of machine learning and their relevance to practitioners.
+
+
 **Summary**:
 The paper “Reconciling modern machine learning practice and the bias-variance trade-off” by Belkin et al. proposes a unified performance curve, the “double descent” curve, which reconciles the traditional bias-variance trade-off with the behavior of modern machine learning methods that often use very rich models such as neural networks trained to interpolate the data.
+
+
 **Key insights and lessons learned**:
 * The bias-variance trade-off has been a fundamental concept in machine learning, but it does not fully explain the behavior of modern machine learning methods.
 * Modern machine learning methods often use very rich models that interpolate the data, which would be considered over-fit by classical standards, but still achieve high accuracy on test data.
 * The “double descent” curve reconciles the traditional bias-variance trade-off with the behavior of modern machine learning methods, showing how increasing model capacity beyond the point of interpolation can lead to improved performance.
 * The “double descent” curve provides a more nuanced understanding of the performance of machine learning models and suggests that the choice of model capacity depends on the task, the dataset, and the amount of available data.
+
+
 **Questions for the authors**:
 * What motivated you to investigate the behavior of modern machine learning methods and the bias-variance trade-off?
 * How do you see the “double descent” curve impacting the practice of machine learning?
 * Do you think the “double descent” curve can help guide the development of new machine learning models or the selection of existing models for specific tasks?
+
+
 **Suggestions for future research**:
 * Investigate the “double descent” curve on a wider range of machine learning tasks and datasets to further validate its applicability.
 * Examine the impact of other factors, such as data quality and model interpretability, on the choice of model capacity and the behavior of the “double descent” curve.
@@ -42,21 +52,31 @@ Certain key phenomena of deep learning are manifested similarly in kernel method
 ## On the linearity of large non-linear models: when and why the tangent kernel is constant
 #### Chaoyue Liu, Libin Zhu, Mikhail Belkin
 ###### 2 Oct 2020 (v1)
+
+
 **Abstract**:
 The goal of this work is to shed light on the remarkable phenomenon of transition to linearity of certain neural networks as their width approaches infinity. We show that the transition to linearity of the model and, equivalently, constancy of the (neural) tangent kernel (NTK) result from the scaling properties of the norm of the Hessian matrix of the network as a function of the network width. We present a general framework for understanding the constancy of the tangent kernel via Hessian scaling applicable to the standard classes of neural networks. Our analysis provides a new perspective on the phenomenon of constant tangent kernel, which is different from the widely accepted “lazy training”. Furthermore, we show that the transition to linearity is not a general property of wide neural networks and does not hold when the last layer of the network is non-linear. It is also not necessary for successful optimization by gradient descent.
+
+
 **Summary**:
 The paper “On the linearity of large non-linear models: when and why the tangent kernel is constant” by Liu, Zhu, and Belkin aims to explain the phenomenon of transition to linearity of certain neural networks as their width approaches infinity by showing that it results from the scaling properties of the norm of the Hessian matrix of the network as a function of the network width, and presents a general framework for understanding the constancy of the tangent kernel via Hessian scaling applicable to standard classes of neural networks.
+
+
 **Key insights and lessons learned from the paper are**:
 * The transition to linearity of the model and the constancy of the neural tangent kernel (NTK) result from the scaling properties of the norm of the Hessian matrix of the network as a function of the network width.
 * The constancy of the tangent kernel can be explained by the Hessian scaling framework, which is different from the widely accepted “lazy training” perspective.
 * The transition to linearity is not a general property of wide neural networks and does not hold when the last layer of the network is non-linear.
 * The transition to linearity is not necessary for successful optimization by gradient descent.
+
+
 **Some questions that could be asked to the authors are**:
 * What motivated you to investigate the phenomenon of transition to linearity of neural networks, and why do you think it is important to understand it?
 * How did you come up with the idea of using the Hessian scaling framework to explain the constancy of the tangent kernel, and what challenges did you face in developing this framework?
 * What are some potential applications or implications of your findings for the field of machine learning?
 * In what ways do you think your work can be extended or improved, and what are some promising directions for future research on this topic?
 * Are there any limitations or assumptions of your study that you think are important to acknowledge, and how might they affect the generalizability of your results?
+
+
 **Some suggestions for related topics or future research directions based on the content of the paper are**:
 * Investigating the Hessian properties of other types of neural networks beyond the standard classes considered in the paper, and exploring how they relate to the constancy of the tangent kernel and the transition to linearity.
 * Examining how the transition to linearity and the constancy of the tangent kernel can affect the generalization performance of neural networks, and developing theoretical bounds or empirical methods to quantify this effect.
@@ -81,21 +101,31 @@ The paper “Generalization bounds for deep learning” by Guillermo Valle-Pére
 ## On the linearity of large non-linear models: when and why the tangent kernel is constant
 #### Chaoyue Liu, Libin Zhu, Mikhail Belkin
 ###### 2 Oct 2020 (v1)
+
+
 **Abstract**:
 The goal of this work is to shed light on the remarkable phenomenon of transition to linearity of certain neural networks as their width approaches infinity. We show that the transition to linearity of the model and, equivalently, constancy of the (neural) tangent kernel (NTK) result from the scaling properties of the norm of the Hessian matrix of the network as a function of the network width. We present a general framework for understanding the constancy of the tangent kernel via Hessian scaling applicable to the standard classes of neural networks. Our analysis provides a new perspective on the phenomenon of constant tangent kernel, which is different from the widely accepted “lazy training”. Furthermore, we show that the transition to linearity is not a general property of wide neural networks and does not hold when the last layer of the network is non-linear. It is also not necessary for successful optimization by gradient descent.
+
+
 **Summary**:
 The paper “On the linearity of large non-linear models: when and why the tangent kernel is constant” by Liu, Zhu, and Belkin aims to explain the phenomenon of transition to linearity of certain neural networks as their width approaches infinity by showing that it results from the scaling properties of the norm of the Hessian matrix of the network as a function of the network width, and presents a general framework for understanding the constancy of the tangent kernel via Hessian scaling applicable to standard classes of neural networks.
+
+
 **Key insights and lessons learned from the paper are**:
 * The transition to linearity of the model and the constancy of the neural tangent kernel (NTK) result from the scaling properties of the norm of the Hessian matrix of the network as a function of the network width.
 * The constancy of the tangent kernel can be explained by the Hessian scaling framework, which is different from the widely accepted “lazy training” perspective.
 * The transition to linearity is not a general property of wide neural networks and does not hold when the last layer of the network is non-linear.
 * The transition to linearity is not necessary for successful optimization by gradient descent.
+
+
 **Some questions that could be asked to the authors are**:
 * What motivated you to investigate the phenomenon of transition to linearity of neural networks, and why do you think it is important to understand it?
 * How did you come up with the idea of using the Hessian scaling framework to explain the constancy of the tangent kernel, and what challenges did you face in developing this framework?
 * What are some potential applications or implications of your findings for the field of machine learning?
 * In what ways do you think your work can be extended or improved, and what are some promising directions for future research on this topic?
 * Are there any limitations or assumptions of your study that you think are important to acknowledge, and how might they affect the generalizability of your results?
+
+
 **Some suggestions for related topics or future research directions based on the content of the paper are**:
 * Investigating the Hessian properties of other types of neural networks beyond the standard classes considered in the paper, and exploring how they relate to the constancy of the tangent kernel and the transition to linearity.
 * Examining how the transition to linearity and the constancy of the tangent kernel can affect the generalization performance of neural networks, and developing theoretical bounds or empirical methods to quantify this effect.
